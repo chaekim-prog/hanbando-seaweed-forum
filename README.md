@@ -13,6 +13,7 @@
 - `research.html`: 해조류와 한반도
 - `cooperation.html`: 남북협력
 - `news.html`: 뉴스·공지
+- `contributions.html`: 기고문
 - `join.html`: 회원가입 및 후원
 - `contact.html`: 문의
 
