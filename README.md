@@ -9,6 +9,7 @@
 - `purpose.html`: 창립 취지
 - `forum.html`: 포럼 활동
 - `ebook.html`: 학술자료 및 E-book
+- `bylaws.html`: 정관
 - `research.html`: 해조류와 한반도
 - `cooperation.html`: 남북협력
 - `news.html`: 뉴스·공지
@@ -18,6 +19,7 @@
 ## 폴더 구성
 
 - `css/style.css`: 전체 스타일
+- `css/bylaws.css`: 정관 페이지 스타일
 - `js/main.js`: 모바일 메뉴 및 스크롤 애니메이션
 - `images/1.jpg`: 메인 배경 이미지
 - `assets/ebook.pdf`: 한반도해조류포럼 e-book PDF
