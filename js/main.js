@@ -1,21 +1,28 @@
 const siteNav = document.querySelector(".site-nav");
 
-if (siteNav && !siteNav.querySelector('a[href="bylaws.html"]')) {
-  const ebookLink = siteNav.querySelector('a[href="ebook.html"]');
-  const bylawsLink = document.createElement("a");
-  bylawsLink.href = "bylaws.html";
-  bylawsLink.textContent = "정관";
-
-  if (window.location.pathname.endsWith("bylaws.html")) {
-    bylawsLink.classList.add("active");
+function ensureNavLink(href, text, afterHref) {
+  if (!siteNav || siteNav.querySelector(`a[href="${href}"]`)) {
+    return;
   }
 
-  if (ebookLink) {
-    ebookLink.insertAdjacentElement("afterend", bylawsLink);
+  const link = document.createElement("a");
+  link.href = href;
+  link.textContent = text;
+
+  if (window.location.pathname.endsWith(href)) {
+    link.classList.add("active");
+  }
+
+  const anchor = siteNav.querySelector(`a[href="${afterHref}"]`);
+  if (anchor) {
+    anchor.insertAdjacentElement("afterend", link);
   } else {
-    siteNav.appendChild(bylawsLink);
+    siteNav.appendChild(link);
   }
 }
+
+ensureNavLink("bylaws.html", "정관", "ebook.html");
+ensureNavLink("contributions.html", "기고문", "news.html");
 
 const navToggle = document.querySelector(".nav-toggle");
 
