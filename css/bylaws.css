@@ -1,0 +1,126 @@
+.bylaws-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.bylaws-summary {
+  position: sticky;
+  top: 96px;
+}
+
+.compact-list {
+  margin: 18px 0 0;
+}
+
+.compact-list div {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.compact-list div:last-child {
+  border-bottom: 0;
+}
+
+.compact-list dt {
+  color: var(--sea);
+  font-weight: 900;
+}
+
+.compact-list dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.bylaws-document {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 18px rgba(8,40,36,.05);
+  overflow: hidden;
+}
+
+.bylaws-chapter {
+  padding: 34px 38px;
+  border-bottom: 1px solid var(--line);
+}
+
+.bylaws-chapter:last-child {
+  border-bottom: 0;
+}
+
+.bylaws-chapter h2 {
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--sea);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.bylaws-chapter article {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(217,231,227,.72);
+}
+
+.bylaws-chapter article:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.bylaws-chapter h3 {
+  color: var(--deep-2);
+  font-size: 1.05rem;
+}
+
+.bylaws-chapter p,
+.bylaws-chapter li {
+  color: var(--muted);
+}
+
+.bylaws-chapter ol {
+  padding-left: 1.4rem;
+  margin: 8px 0 0;
+}
+
+.bylaws-chapter li + li {
+  margin-top: 8px;
+}
+
+.nested-list {
+  margin-top: 8px;
+}
+
+.bylaws-addendum {
+  background: linear-gradient(180deg, white, var(--foam));
+}
+
+.bylaws-signature {
+  margin-top: 22px;
+  color: var(--deep) !important;
+  font-weight: 800;
+  text-align: right;
+}
+
+@media (max-width: 1180px) {
+  .bylaws-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bylaws-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .bylaws-chapter {
+    padding: 26px 22px;
+  }
+
+  .compact-list div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
