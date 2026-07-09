@@ -22,7 +22,8 @@ function ensureNavLink(href, text, afterHref) {
 }
 
 ensureNavLink("bylaws.html", "정관", "ebook.html");
-ensureNavLink("contributions.html", "기고문", "news.html");
+ensureNavLink("media.html", "언론보도", "news.html");
+ensureNavLink("contributions.html", "기고문", "media.html");
 
 const navToggle = document.querySelector(".nav-toggle");
 
